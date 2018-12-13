@@ -32,9 +32,10 @@ You can use a client like curl or RESTED to try the endpoint:
 
 ## TODO
 
-- Improve error handling
-- Find a workaround or fix [lagom 322](https://github.com/lagom/lagom/issues/322) by adding unmanaged service support to the test service loader
-- Complete the API coverage of [exchangeratesapi.io](http://exchangeratesapi.io/)
+- Add caching
+- Improve error handling: exchangeratesapi.io has downtime occasionally.
+- Find a workaround or fix [lagom 322](https://github.com/lagom/lagom/issues/322) by adding unmanaged service support to the test service loader.
+- Complete the API coverage of [exchangeratesapi.io](http://exchangeratesapi.io/).
 
 
 [rested]: etc/img/rested.png "RESTED Screenshot" 
