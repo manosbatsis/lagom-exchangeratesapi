@@ -21,6 +21,9 @@ cd lagom-exchangeratesapi
 ```bash
 sbt runAll
 ```
+
+4) Test
+
 Currently only manual testing is possible due to [lagom 322](https://github.com/lagom/lagom/issues/322).
 
 You can use a client like curl or RESTED to try the endpoint:
