@@ -26,8 +26,16 @@ sbt runAll
 
 Currently only manual testing is possible due to [lagom 322](https://github.com/lagom/lagom/issues/322).
 
-You can use a client like curl or RESTED to try the endpoint:
- 
+You can use a client to try the endpoint like curl:
+
+```bash
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data "{\"fromCurrency\": \"GBP\",\"toCurrency\" : \"EUR\",\"amount\" : 102.6}" \
+  http://localhost:9000/api/convert
+ ```
+  or RESTED:
+  
 ![RESTED Screenshot][rested]
 
 ## TODO
@@ -38,4 +46,6 @@ You can use a client like curl or RESTED to try the endpoint:
 - [#4](https://github.com/manosbatsis/lagom-exchangeratesapi/issues/4) Complete the API coverage of [exchangeratesapi.io](http://exchangeratesapi.io/).
 
 
-[rested]: etc/img/rested.png "RESTED Screenshot" 
+[rested]: etc/img/rested.png "RESTED Screenshot"
+
+
