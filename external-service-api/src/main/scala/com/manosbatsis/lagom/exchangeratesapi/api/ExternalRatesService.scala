@@ -10,7 +10,7 @@ import play.api.libs.json.{Format, Json}
   * Requires registration of the API to the ServiceLocator via build.sbt as:
   *
   * {{{
-  * lagomUnmanagedServices in ThisBuild := Map("external-service" -> "https://api.exchangeratesapi.io")
+  * lagomUnmanagedServices in ThisBuild := Map("api-exchangeratesapi-io" -> "https://api.exchangeratesapi.io")
   * }}}
   *
   * See https://www.lagomframework.com/documentation/1.4.x/scala/ServiceLocator.html#Communicating-with-external-services
@@ -27,7 +27,7 @@ trait ExternalRatesService extends Service {
 
   override def descriptor: Descriptor = {
     import Service._
-    named("external-service")
+    named("api-exchangeratesapi-io")
       .withCalls(
         restCall(Method.GET,"/latest?base&symbols", getRates _)
       )
